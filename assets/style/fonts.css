@@ -1,0 +1,32 @@
+@font-face {
+    font-family: "Rubik";
+    src: url('../fonts/Rubik-Regular.ttf');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Rubik";
+    src: url('../fonts/Rubik-Medium.ttf');
+    font-weight: 500; 
+}
+
+@font-face {
+    font-family: "Rubik";
+    src: url('../fonts/Rubik-SemiBold.ttf');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "Rubik";
+    src: url('../fonts/Rubik-Bold.ttf');
+    font-weight: bold;
+}
+
+html{
+    font-size: 20px;
+}
+
+body{
+    font-family: Rubik;
+    color: var(--text-white);
+}
