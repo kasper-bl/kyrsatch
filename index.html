@@ -39,16 +39,18 @@
         <section class="catalog wrapper">
             <div class="catalog__search-inner">
                 <div class="catalog__search-container">
-                    <form class="catalog__search">
-                        <input type="search" placeholder="Введите название игры...">
-                        <button>Найти игру</button>
-                    </form>
+                    <div class="catalog__searth-backgroung">
+                        <form class="catalog__search">
+                            <input type="search" placeholder="Введите название игры...">
+                            <button class="button">Найти игру</button>
+                        </form>
+                    </div>
                     <div class="catalog__sort">
                         <p>Сортировка:  Название</p>
                         <img src="/assets/img/icon/arrow_sort.svg" alt="arrow">
                     </div>
                 </div>
-                <div class="catalog__games">
+                <div class="catalog__inner">
                     <div class="catalog__filters">
                         <h3>Тип</h3>
                         <div class="filters__category">
@@ -80,11 +82,14 @@
                             <p>(18)</p>
                         </div>
                         <h3>Кол-во игроков</h3>
-                        <div class="range-slider" id="playerSlider">
-                        <div class="range-track" id="track"></div>
-                        <div class="range-handle" id="handleLeft" data-min="2" data-max="18"></div>
-                        <div class="range-handle" id="handleRight" data-min="2" data-max="18"></div>
-                        <div class="slider-value">Игроки: <span id="valueDisplay">2-6</span></div>
+                        <div class="filters__players">
+                            <div class="range-slider" id="playerSlider"> </div>
+                            <div class="range-track" id="track"></div>
+                            <div class="range-handle" id="handleLeft" data-min="2" data-max="18"></div>
+                            <div class="range-handle" id="handleRight" data-min="2" data-max="18"></div>
+                            <div class="slider-value">Игроки: <span id="valueDisplay">2-6</span></div>
+                        </div>
+                        
                         <h3>Возраст</h3>
                         <div class="filters__age">
                             <p>3+</p>
@@ -108,11 +113,79 @@
                                 <p>Сложные</p>
                                 <p>(18)</p>
                             </div> 
-                        </div>
+                        </div> 
+                        <a href="">применить</a>   
+                    </div>
+                    <div class="catalog__container">
+                        <article class="catalog__cart">
+                            <div class="cart_img">
+                                <img src="/assets/img/catalog/monopoly.png" alt="monopoly">
+                            </div>
+                            <h2>MONOPOLY</h2>
+                            <p>Уровень сложности</p>
+                            <div class="cart__info">
+                                <img src="/assets/img/icon/user_icon.svg" alt="user_icon">
+                                <p>2-6</p>
+                            </div>
+                        </article>
+                        <article class="catalog__cart">
+                            <div class="cart_img">
+                                <img src="/assets/img/catalog/monopoly.png" alt="monopoly">
+                            </div>
+                            <h2>MONOPOLY</h2>
+                            <p>Уровень сложности</p>
+                            <div class="cart__info">
+                                <img src="/assets/img/icon/user_icon.svg" alt="user_icon">
+                                <p>2-6</p>
+                            </div>
+                        </article>
+                        <article class="catalog__cart">
+                            <div class="cart_img">
+                                <img src="/assets/img/catalog/monopoly.png" alt="monopoly">
+                            </div>
+                            <h2>MONOPOLY</h2>
+                            <p>Уровень сложности</p>
+                            <div class="cart__info">
+                                <img src="/assets/img/icon/user_icon.svg" alt="user_icon">
+                                <p>2-6</p>
+                            </div>
+                        </article>
+                        <article class="catalog__cart">
+                            <div class="cart_img">
+                                <img src="/assets/img/catalog/monopoly.png" alt="monopoly">
+                            </div>
+                            <h2>MONOPOLY</h2>
+                            <p>Уровень сложности</p>
+                            <div class="cart__info">
+                                <img src="/assets/img/icon/user_icon.svg" alt="user_icon">
+                                <p>2-6</p>
+                            </div>
+                        </article>
+                        <article class="catalog__cart">
+                            <div class="cart_img">
+                                <img src="/assets/img/catalog/monopoly.png" alt="monopoly">
+                            </div>
+                            <h2>MONOPOLY</h2>
+                            <p>Уровень сложности</p>
+                            <div class="cart__info">
+                                <img src="/assets/img/icon/user_icon.svg" alt="user_icon">
+                                <p>2-6</p>
+                            </div>
+                        </article>
+                        <article class="catalog__cart">
+                            <div class="cart_img">
+                                <img src="/assets/img/catalog/monopoly.png" alt="monopoly">
+                            </div>
+                            <h2>MONOPOLY</h2>
+                            <p>Уровень сложности</p>
+                            <div class="cart__info">
+                                <img src="/assets/img/icon/user_icon.svg" alt="user_icon">
+                                <p>2-6</p>
+                            </div>
+                        </article>
                     </div>
                 </div>
             </div>
-
         </section>
         <section class="about-us" id="about-us">
                 <div class="about-us__inner wrapper">
