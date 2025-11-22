@@ -36,7 +36,84 @@
                     
                 </div>
         </section>
-            <!-- ТУТ ДОЛЖЕН БЫТЬ КАТАЛОГ-->
+        <section class="catalog wrapper">
+            <div class="catalog__search-inner">
+                <div class="catalog__search-container">
+                    <form class="catalog__search">
+                        <input type="search" placeholder="Введите название игры...">
+                        <button>Найти игру</button>
+                    </form>
+                    <div class="catalog__sort">
+                        <p>Сортировка:  Название</p>
+                        <img src="/assets/img/icon/arrow_sort.svg" alt="arrow">
+                    </div>
+                </div>
+                <div class="catalog__games">
+                    <div class="catalog__filters">
+                        <h3>Тип</h3>
+                        <div class="filters__category">
+                            <p>Стратегия</p>
+                            <p>(10)</p>
+                        </div>
+                        <div class="filters__category">
+                            <p>Экономические</p>
+                            <p>(15)</p>
+                        </div>
+                        <div class="filters__category">
+                            <p>Коммуникативные</p>
+                            <p>(19)</p>
+                        </div>
+                        <div class="filters__category">
+                            <p>Логические</p>
+                            <p>(5)</p>
+                        </div>
+                        <div class="filters__category">
+                            <p>Ролевые</p>
+                            <p>(13)</p>
+                        </div>
+                        <div class="filters__category">
+                            <p>Викторины</p>
+                            <p>(7)</p>
+                        </div>
+                        <div class="filters__category">
+                            <p>Словесные</p>
+                            <p>(18)</p>
+                        </div>
+                        <h3>Кол-во игроков</h3>
+                        <div class="range-slider" id="playerSlider">
+                        <div class="range-track" id="track"></div>
+                        <div class="range-handle" id="handleLeft" data-min="2" data-max="18"></div>
+                        <div class="range-handle" id="handleRight" data-min="2" data-max="18"></div>
+                        <div class="slider-value">Игроки: <span id="valueDisplay">2-6</span></div>
+                        <h3>Возраст</h3>
+                        <div class="filters__age">
+                            <p>3+</p>
+                            <p>10+</p>
+                            <p>16+</p>
+                            <p>6+</p>
+                            <p>14+</p>
+                            <p>18+</p>
+                        </div>
+                        <h3>Сложность</h3>
+                        <div class="filters__complexity">
+                            <div>
+                                <p>Лёгкие</p>
+                                <p>(13)</p>
+                            </div>
+                            <div>
+                                <p>Средние</p>
+                                <p>(7)</p>
+                            </div>
+                            <div>
+                                <p>Сложные</p>
+                                <p>(18)</p>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
         <section class="about-us" id="about-us">
                 <div class="about-us__inner wrapper">
                     <img src="assets/img/banners/chess.png" alt="chess">
