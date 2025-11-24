@@ -221,7 +221,15 @@ input{
 }
 .filters__category, .filters__complexity div{
     display: flex;
+    gap: 10px;
     padding-left: 1vw;
+    justify-content: space-between;
+}
+
+.filters__complexity{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     justify-content: space-between;
 }
 
