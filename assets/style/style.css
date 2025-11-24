@@ -18,6 +18,8 @@ a{
     --bg-input: #31303B;
     --bg-cart: #152240;
     --green: #13C25C;
+    --red-text: #F5313C;
+    --yellow: #CC9933;
 
 }
 
@@ -222,7 +224,7 @@ input{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    box-shadow: 0 0 20px var(--btn-color);
+    box-shadow: 0 3px 15px var(--btn-color);
     border-radius: 10px;
     position: relative;
     overflow: hidden;
@@ -269,11 +271,6 @@ input{
     font-size: 1.4rem;
 }
 
-.cart__content > p{
-    font-size: 0.8rem;
-    color: var(--green);
-}
-
 
 .cart__players{
     display: flex;
@@ -289,11 +286,41 @@ input{
     border-radius: 2px;
 }
 
-.cart__progress-fill {
+.cart__difficulty-easy{
+    font-size: 0.8rem;
+    color: var(--green);
+}
+
+.cart__progress-easy {
     width: 25%; 
     height: 100%;
     background-color: var(--green);
     border-radius: 2px 0 0 2px;
+}
+
+.cart__difficulty-normal{
+    font-size: 0.8rem;
+    color: var(--yellow);
+}
+
+
+.cart__progress-normal {
+    width: 50%; 
+    height: 100%;
+    background-color: var(--yellow);
+    border-radius: 2px 0 0 2px;
+}
+
+.cart__difficulty-hard{
+    font-size: 0.8rem;
+    color: var(--red-text);
+}
+
+.cart__progress-hard {
+    width: 100%; 
+    height: 100%;
+    background-color: var(--red-text);
+    border-radius: 2px;
 }
 
 .cart__content{
