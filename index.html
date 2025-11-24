@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/style/fonts.css">
     <link rel="stylesheet" href="assets/style/style.css">
+    <script src="assets/script/main.js" defer></script>
     <title>GameGrad</title>
 </head>
 <body>
@@ -14,7 +15,7 @@
         </div>
         <div class="header__content">
             <nav class="header__nav">
-                <a href="#">Каталог</a>
+                <a href="#catalog">Каталог</a>
                 <a href="#about-us">О нас</a>
                 <a href="#footer">Контакты</a>
             </nav>
@@ -36,7 +37,7 @@
                     
                 </div>
         </section>
-        <section class="catalog wrapper">
+        <section class="catalog wrapper" id="catalog">
             <div class="catalog__search-inner">
                 <div class="catalog__search-container">
                     <div class="catalog__searth-backgroung">
@@ -52,69 +53,73 @@
                 </div>
                 <div class="catalog__inner">
                     <div class="catalog__filters">
-                        <h3>Тип</h3>
-                        <div class="filters__category">
-                            <p>Стратегия</p>
-                            <p>(10)</p>
-                        </div>
-                        <div class="filters__category">
-                            <p>Экономические</p>
-                            <p>(15)</p>
-                        </div>
-                        <div class="filters__category">
-                            <p>Коммуникативные</p>
-                            <p>(19)</p>
-                        </div>
-                        <div class="filters__category">
-                            <p>Логические</p>
-                            <p>(5)</p>
-                        </div>
-                        <div class="filters__category">
-                            <p>Ролевые</p>
-                            <p>(13)</p>
-                        </div>
-                        <div class="filters__category">
-                            <p>Викторины</p>
-                            <p>(7)</p>
-                        </div>
-                        <div class="filters__category">
-                            <p>Словесные</p>
-                            <p>(18)</p>
-                        </div>
-                        <h3>Кол-во игроков</h3>
-                        <div class="filters__players">
-                            <div class="range-slider" id="playerSlider"> </div>
-                            <div class="range-track" id="track"></div>
-                            <div class="range-handle" id="handleLeft" data-min="2" data-max="18"></div>
-                            <div class="range-handle" id="handleRight" data-min="2" data-max="18"></div>
-                            <div class="slider-value">Игроки: <span id="valueDisplay">2-6</span></div>
-                        </div>
-                        
-                        <h3>Возраст</h3>
-                        <div class="filters__age">
-                            <p>3+</p>
-                            <p>10+</p>
-                            <p>16+</p>
-                            <p>6+</p>
-                            <p>14+</p>
-                            <p>18+</p>
-                        </div>
-                        <h3>Сложность</h3>
-                        <div class="filters__complexity">
-                            <div>
-                                <p>Лёгкие</p>
+                        <div class="filters__content">
+                            <h3>Тип</h3>
+                            <div class="filters__category">
+                                <p>Стратегия</p>
+                                <p>(10)</p>
+                            </div>
+                            <div class="filters__category">
+                                <p>Экономические</p>
+                                <p>(15)</p>
+                            </div>
+                            <div class="filters__category">
+                                <p>Коммуникативные</p>
+                                <p>(19)</p>
+                            </div>
+                            <div class="filters__category">
+                                <p>Логические</p>
+                                <p>(5)</p>
+                            </div>
+                            <div class="filters__category">
+                                <p>Ролевые</p>
                                 <p>(13)</p>
                             </div>
-                            <div>
-                                <p>Средние</p>
+                            <div class="filters__category">
+                                <p>Викторины</p>
                                 <p>(7)</p>
                             </div>
-                            <div>
-                                <p>Сложные</p>
+                            <div class="filters__category">
+                                <p>Словесные</p>
                                 <p>(18)</p>
-                            </div> 
+                            </div>
+                            <h3>Кол-во игроков</h3>
+                            <div class="filters__players">
+                                <div class="range-slider" id="playerSlider">
+                                    <div class="range-track" id="track"></div>
+                                    <div class="range-handle" id="handleLeft" data-min="2" data-max="18"></div>
+                                    <div class="range-handle" id="handleRight" data-min="2" data-max="18"></div>
+                                </div>
+
+                                <p class="slider-value">Игроки: <span class="filters__player-red" id="playerRange">2-6</span></p>
+                            </div>
+                            
+                            <h3>Возраст</h3>
+                            <div class="filters__age">
+                                <p>3+</p>
+                                <p>10+</p>
+                                <p>16+</p>
+                                <p>6+</p>
+                                <p>14+</p>
+                                <p>18+</p>
+                            </div>
+                            <h3>Сложность</h3>
+                            <div class="filters__complexity">
+                                <div>
+                                    <p>Лёгкие</p>
+                                    <p>(13)</p>
+                                </div>
+                                <div>
+                                    <p>Средние</p>
+                                    <p>(7)</p>
+                                </div>
+                                <div>
+                                    <p>Сложные</p>
+                                    <p>(18)</p>
+                                </div> 
+                            </div>
                         </div> 
-                        <a href="">применить</a>   
+                        <a class="button" href="">применить</a>   
                     </div>
                     <div class="catalog__container">
                         <article class="catalog__cart">
