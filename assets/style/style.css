@@ -14,8 +14,10 @@ a{
     --body-color: #02010E;
     --btn-color: #C52932;
     --blue-text: #5C7A9D;
-    --dark-color: #1B1A26;
+    --dark-blue-color: #1B1A26;
     --bg-input: #31303B;
+    --bg-cart: #152240;
+    --green: #13C25C;
 
 }
 
@@ -137,12 +139,10 @@ input{
 
 /*CATALOG*/
 .catalog__searth-backgroung{
-    background-color: var(--dark-color);
+    background-color: var(--dark-blue-color);
     width: 80%;
     border-radius: 50px;
-    padding: 10px 30px;
-    height: 60px;
-    
+    padding: 15px 30px;
 }
 
 .catalog__search-container{
@@ -157,6 +157,7 @@ input{
 }
 .catalog__search button{
     width: 15%;
+    border: none;
 }
 
 .catalog__search input{
@@ -191,7 +192,7 @@ input{
 }
 
 .catalog__filters{
-    background-color: var(--dark-color);
+    background-color: var(--dark-blue-color);
     padding: 20px;
     width: 30%;
     border-radius: 10px;
@@ -212,3 +213,104 @@ input{
     justify-content: space-between;
 }
 
+/* CARD*/
+
+.catalog__cart{
+    min-width: 300px;
+    min-height: 450px;
+    background-color: var(--bg-cart);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 0 20px var(--btn-color);
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.catalog__cart > img{
+    width: 100%;
+    height: auto;
+}
+
+.cart__logo {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 100px;
+    z-index: 10;
+}
+
+.cart__logo img{
+    width: 100%;
+    height: auto;
+}
+
+.cart__content{
+    background-color: var(--bg-cart);
+    padding: 15px;
+    margin-top: auto;
+    border-radius: 0 0 10px 10px;
+}
+
+.cart__content::before {
+    content: '';
+    position: absolute;
+    bottom: 150px; 
+    left: 0;
+    right: 0;
+    height: 60px; 
+    background: linear-gradient(to top, var(--bg-cart), transparent);
+    z-index: 5;
+    pointer-events: none; 
+}
+
+.cart__content h2{
+    font-size: 1.4rem;
+}
+
+.cart__content > p{
+    font-size: 0.8rem;
+    color: var(--green);
+}
+
+
+.cart__players{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.cart__progress-bar {
+    width: 100%;
+    height: 4px;
+    background-color: var(--bg-input); 
+    border-radius: 2px;
+}
+
+.cart__progress-fill {
+    width: 25%; 
+    height: 100%;
+    background-color: var(--green);
+    border-radius: 2px 0 0 2px;
+}
+
+.cart__content{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card__bg-wrapper {
+    width: 100%;
+    height: 300px;
+    overflow: hidden; 
+}
+
+.card__bg {
+    width: 100%;
+    height: auto;
+    object-fit: cover; 
+    object-position: center;
+}
