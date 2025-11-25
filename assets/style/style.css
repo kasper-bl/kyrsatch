@@ -326,7 +326,8 @@ input{
 }
 
 .cart__content h2{
-    font-size: 1.4rem;
+    font-size: 1.2rem;
+    font-weight: 500;
 }
 
 
@@ -434,7 +435,7 @@ input{
 .footer__form form{
     padding: 10px 10px;
     display: flex;
-    width: 350px;
+    width: 550px;
     border-radius: 50px;
     background-color: var(--bg-input);
 }
