@@ -180,11 +180,13 @@ input{
 .game-cart__image-wrapper::before {
   right: 10px;
   background-image: url('/assets/img/icon/plus.svg');
+  cursor: pointer;
 }
 
 .game-cart__image-wrapper::after {
   right: 64px; 
   background-image: url('/assets/img/icon/favorit.svg'); 
+  cursor: pointer;
 }
 
 
