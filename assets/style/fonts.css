@@ -12,6 +12,12 @@
 
 @font-face {
     font-family: "Rubik";
+    src: url('../fonts/Rubik-Light.ttf');
+    font-weight: 300; 
+}
+
+@font-face {
+    font-family: "Rubik";
     src: url('../fonts/Rubik-SemiBold.ttf');
     font-weight: 600;
 }

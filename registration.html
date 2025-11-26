@@ -14,18 +14,32 @@
     <main>
         <section class="registration wrapper">
             <div class="registration__title">
-                <h2> ПРИВЕТ :)</h2>
+                <h2>ПРИВЕТ :)</h2>
                 <p>Заполните поля своими данными</p>
             </div>
+            
             <form>
+                <div class="registration__form">
                 <label>Имя</label>
-                <input type="text">
+                <input type="text" placeholder="Введите имя">
+                </div>
+
+                <div class="registration__form">
                 <label>Почта</label>
-                <input type="email">
+                <input type="email" placeholder="Введите почту">
+                </div>
+
+                <div class="registration__form">
                 <label>Пароль</label>
-                <input type="password">
-                <button class="button">Регистрация</button>
+                <input type="password" placeholder="Введите пароль">
+                </div>
+
+                <button type="submit" class="button">Регистрация</button>
             </form>
+
+            <div class="registration__footer">
+                 <a href="#">уже есть аккаунт?</a>
+            </div>
         </section>
     </main>
 </body>
