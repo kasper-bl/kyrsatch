@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/style/fonts.css">
+    <link rel="stylesheet" href="assets/style/profile.css">
+    <title>Профиль</title>
+</head>
+<body>
+    <header class="header wrapper">
+        <div class="header__logo">
+            <a href="/index.html"><img src="assets/img/icon/logo.svg" alt="logo"></a>
+        </div>
+        <div class="header__content">
+            <nav class="header__nav">
+                <a href="#catalog">Каталог</a>
+                <a href="#about-us">О нас</a>
+                <a href="#footer">Контакты</a>
+            </nav>
+            <div class="header__button">
+                <a href="/index.html" class="button">Выход</a>
+            </div>
+    </header>
+    <main>
+        <section class="user-profile wrapper">
+            <div class="user-profile__inner">
+                <img src="assets/img/banners/user_photo.png" alt="">
+                <div class="user-profile__info">
+                    <h2>Kasper</h2>
+                    <ul>
+                        <li>
+                            <a href="#" class="user-profile__edit-link">Редактировать профиль</a>
+                        </li>
+                    </ul>
+                    <div class="user-profile__bio ">
+                        <label class="user-profile__bio-label">Описание</label>
+                        <div class="user-profile__description">
+                            <p>очень милая и добрая жаба</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="favorit-games wrapper">
+            <div class="favorit-games__tabs">
+                <p class="favorit-games__tabs--active">ИЗБРАННОЕ</p>
+                <p>ПОДБОРКИ</p>
+            </div>
+            <div class="favorit-games__content">
+                <a href="/">
+                    <article class="catalog__cart">
+                        <div class="card__bg-wrapper">
+                            <img src="assets/img/catalog/monopoly.png" alt="Monopoly" class="card__bg">
+                        </div>
+                        <div class="cart__logo">
+                            <img src="assets/img/catalog/logo/monopoly_logo.svg" alt="logo">
+                        </div>
+                        <div class="cart__content">
+                            <h2>MONOPOLY</h2>
+                            <p class="cart__difficulty-easy">Уровень сложности</p>
+                            <div class="cart__progress-bar">
+                                <div class="cart__progress-easy"></div>
+                            </div>
+                            <div class="cart__players">
+                                <img src="assets/img/icon/user_icon.svg" alt="user_icon">
+                                <p>2 - 6</p>
+                            </div>
+                        </div>
+                    </article>
+                </a>
+                <a href="/">
+                    <article class="catalog__cart">
+                        <div class="card__bg-wrapper">
+                            <img src="assets/img/catalog/war_of_the_ring.png" alt="war_of_the_ring" class="card__bg">
+                        </div>
+                        <div class="cart__logo">
+                            <img src="assets/img/catalog/logo/war_of_the_ring_logo.svg" alt="logo">
+                        </div>
+                        <div class="cart__content">
+                            <h2>WAR OF THE RIGN</h2>
+                            <p class="cart__difficulty-hard">Уровень сложности</p>
+                            <div class="cart__progress-bar">
+                                <div class="cart__progress-hard"></div>
+                            </div>
+                            <div class="cart__players">
+                                <img src="assets/img/icon/user_icon.svg" alt="user_icon">
+                                <p>2 - 6</p>
+                            </div>
+                        </div>
+                    </article>
+                </a>
+                <a href="/">
+                    <article class="catalog__cart">
+                        <div class="card__bg-wrapper">
+                            <img src="assets/img/catalog/geistesblitz.png" alt="geistesblitz" class="card__bg">
+                        </div>
+                        <div class="cart__content">
+                            <h2>GEISTESBLITZ</h2>
+                            <p class="cart__difficulty-easy">Уровень сложности</p>
+                            <div class="cart__progress-bar">
+                                <div class="cart__progress-easy"></div>
+                            </div>
+                            <div class="cart__players">
+                                <img src="assets/img/icon/user_icon.svg" alt="user_icon">
+                                <p>2 - 6</p>
+                            </div>
+                        </div>
+                    </article>
+                </a>
+                <a href="/">
+                    <article class="catalog__cart">
+                        <div class="card__bg-wrapper">
+                            <img src="assets/img/catalog/jenga.png" alt="jenga" class="card__bg">
+                        </div>
+                        <div class="cart__logo">
+                            <img src="assets/img/catalog/logo/jenga_logo.svg" alt="logo">
+                        </div>
+                        <div class="cart__content">
+                            <h2>JENGA</h2>
+                            <p class="cart__difficulty-easy">Уровень сложности</p>
+                            <div class="cart__progress-bar">
+                                <div class="cart__progress-easy"></div>
+                            </div>
+                            <div class="cart__players">
+                                <img src="assets/img/icon/user_icon.svg" alt="user_icon">
+                                <p>2 - 6</p>
+                            </div>
+                        </div>
+                    </article>
+                </a>
+            </div>
+            <div class="catalog__pagination">
+                <div class="pagination__item--active">
+                    <p>1</p>
+                </div>
+                <div class="pagination__item">
+                    <p>2</p>
+                </div>
+                <div class="pagination__item">
+                    <p>3</p>
+                </div>
+                <img src="assets/img/icon/next.svg" alt="next">
+                <img src="assets/img/icon/end.svg" alt="end">
+            </div>
+        </section>
+    </main>
+    <footer id="footer" class="footer wrapper">
+        <div class="footer__form">
+            <img src="assets/img/icon/logo.svg" alt="logo">
+            <form>
+                <input type="text" placeholder="Предложите свою игру">
+                <button class="button">Отправить</button>
+            </form>
+        </div>
+        <div class="footer__soc-networks">
+            <div class="footer__img">
+                <a href="/"><img src="assets/img/social-network/email.svg" alt="email"></a>
+                <a href="/"><img src="assets/img/social-network/tg.svg" alt="tg"></a>
+                <a href="/"><img src="assets/img/social-network/vk.svg" alt="vk"></a>
+            </div>
+            <p> &copy; Gamegrad 2025 &reg; - Ваш гид в мире игр</p>
+        </div>
+    </footer>
+</body>
+</html>
