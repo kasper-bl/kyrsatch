@@ -76,19 +76,22 @@ input {
   align-items: center;
   flex-direction: column;
   justify-content: space-between;
-  gap: 30px;
 }
 
+.registration__title {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
 
-
-.registration__title h2{
+.registration__title h2, .registration__title p {
   text-align: center;
   font-weight: 300;
 }
 
 .registration form {
-  height: 250px;
-  width: 40%;
+  height: 350px;
+  width: 400px;
   display: flex;
   gap: 10px;
   flex-direction: column;
@@ -135,4 +138,10 @@ input {
 .registration__footer a {
   color: var(--grey-text);
   font-size: 0.9rem;
+}
+
+@media(max-width:430px){
+  .registration form{
+    width: 80%;
+  }
 }

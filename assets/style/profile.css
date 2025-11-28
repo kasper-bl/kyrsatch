@@ -66,6 +66,14 @@ input{
     justify-content: space-between;
 }
 
+.header__menu{
+    display: none;
+}
+
+.menu__content{
+    display: none;
+}
+
 .header__content{
     display: flex;
     align-items: center;
@@ -86,6 +94,7 @@ input{
     display: flex;
     gap: 20px;
 }
+
 
 /*USER-PROFILE*/
 
@@ -345,4 +354,58 @@ input{
 
 .footer__form button{
     border: none;
+}
+
+@media (max-width:768px){
+    .wrapper{
+        padding: 20px;
+    }
+    .header__nav, .header__button{
+        display: none;
+    }
+
+    .header__menu{
+        display: block;
+        cursor: pointer;
+    }
+
+    .user-profile__inner{
+        gap: 30px;
+    }
+
+    .user-profile__inner img{
+        width: 100%;
+        height: auto;
+    }
+
+    .footer{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .footer__soc-networks{
+        flex-direction: row;
+    }
+
+    .footer__form form{
+        width: 100%;
+    }
+}
+
+@media(max-width: 480px){
+    .user-profile__inner{
+        flex-direction: column;
+    }
+    .favorit-games__tabs{
+        flex-direction: column;
+        gap: 10px;
+    }
+
+}
+
+@media (max-width:360px){
+    .footer__form input{
+        padding: 0;
+    }
 }
