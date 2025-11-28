@@ -393,7 +393,7 @@ input{
     }
 }
 
-@media(max-width: 480px){
+@media(max-width: 550px){
     .user-profile__inner{
         flex-direction: column;
     }
