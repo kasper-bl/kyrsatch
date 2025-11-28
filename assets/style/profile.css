@@ -129,7 +129,7 @@ input{
 
 .favorit-games__tabs{
     display: flex;
-    font-size: 1.5rem;
+    font-size: 2rem;
     gap: 70px;
     color: var(--grey-text);
 }

@@ -36,3 +36,9 @@ body{
     font-family: Rubik;
     color: var(--text-white);
 }
+
+@media (max-width:1000px){
+    html{
+        font-size: 18px;
+    }
+}
