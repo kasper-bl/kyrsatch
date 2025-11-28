@@ -32,6 +32,11 @@ body{
     background-color: var(--body-color);
 }
 
+main{
+    background: radial-gradient(circle 200px at left 25%, #004ca25e, transparent 100%),
+                radial-gradient(circle 200px at right 65%, #004ca25e, transparent 100%);
+}
+
 input{
     outline: none;
     border: none;
@@ -67,6 +72,14 @@ input{
     justify-content: space-between;
 }
 
+.header__menu{
+    display: none;
+}
+
+.menu__content{
+    display: none;
+}
+
 .header__content{
     display: flex;
     align-items: center;
@@ -88,11 +101,13 @@ input{
     gap: 20px;
 }
 
+
 /*GAME-CART*/
 
 .game-cart{
     display: flex;
     justify-content: space-between;
+    width: 90%;
 }
 
 
@@ -111,7 +126,7 @@ input{
     color: var(--blue-text);
 }
 .game-cart__category{
-    width: 65%;
+    width: 350px;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -162,13 +177,15 @@ input{
 
 .game-cart__image-wrapper {
   position: relative;
+  max-width: 600px;
+  max-height: 420px;
 }
 
 .game-cart__image-wrapper::before,
 .game-cart__image-wrapper::after {
   content: '';
   position: absolute;
-  bottom: 20px;
+  bottom: 0;
   width: 35px;
   height: 35px;
   background-size: contain;
@@ -233,4 +250,80 @@ input{
 
 .footer__form button{
     border: none;
+}
+
+@media(max-width:860px){
+    main{
+        background: radial-gradient(circle 200px at left 20%, #004ca25e, transparent 100%),
+                    radial-gradient(circle 400px at right 95%, #004ca25e, transparent 100%);
+    }
+    .game-cart{
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .game-cart__content{
+        width: 50%;
+        align-items: center;
+    }
+
+    .game-cart__image-wrapper::after{
+        right: 20px;
+    }
+    .game-cart__image-wrapper::before{
+        right: 70px;
+    }
+}
+
+
+@media (max-width:768px){
+    .header__nav, .header__button{
+        display: none;
+    }
+
+    .header__menu{
+        display: block;
+        cursor: pointer;
+    }
+    .footer{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .footer__soc-networks{
+        flex-direction: row;
+    }
+
+    .footer__form form{
+        width: 100%;
+    }
+
+}
+
+
+@media (max-width:380px){
+    .wrapper{
+        padding: 20px 0;
+    }
+    .game-cart__image-wrapper::after{
+        right: 20px;
+        bottom: 30px;
+    }
+    .game-cart__image-wrapper::before{
+        right: 70px;
+        bottom: 30px;
+    }
+
+    .footer__form input{
+        padding: 0;
+    }
+    .game-cart__image-wrapper img{
+        width: 100%;
+    }
+
+    .game-cart__content{
+        width: 100%;
+    }
 }
