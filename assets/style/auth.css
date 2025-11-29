@@ -9,19 +9,21 @@ a {
   color: var(--text-white);
 }
 
-:root {
-  --text-white: #fff;
-  --body-color: #02010E;
-  --btn-color: #C52932;
-  --blue-text: #5C7A9D;
-  --dark-blue-color: #1B1A26;
-  --bg-input: #31303B;
-  --bg-cart: #152240;
-  --green: #13C25C;
-  --red-text: #F5313C;
-  --yellow: #CC9933;
-  --grey-text: #969696;
-  --form-input: #14131F;
+:root{
+    --text-white: #fff;
+    --body-color: #02010E;
+    --btn-color: #C52932;
+    --blue-text: #5C7A9D;
+    --dark-blue-color: #1B1A26;
+    --bg-input: #31303B;
+    --bg-cart: #152240;
+    --green: #13C25C;
+    --red-text: #F5313C;
+    --yellow: #CC9933;
+    --grey-text:#969696;
+    --btn-hover: #ad1e25;
+    --cart-hover: #213778;
+
 }
 
 html {
@@ -52,6 +54,11 @@ input {
   background: 
     radial-gradient(ellipse at center bottom, rgba(255, 255, 255, 0.315), transparent 50%),
     var(--btn-color);
+}
+
+.button:hover{
+    background-color: var(--btn-hover);
+    box-shadow: inset 0 0 5px 1px rgba(255, 255, 255, 0.548),  0 0 10px var(--btn-hover);
 }
 
 .blue-text {
@@ -111,6 +118,8 @@ label {
   flex-shrink: 0;
 }
 
+
+
 input {
   width: 100%;
   padding: 15px 16px;
@@ -120,6 +129,10 @@ input {
   color: #ffffff;
   font-size: 16px;
   transition: border-color 0.2s ease;
+}
+
+input:focus{
+    border: 1px solid #fff;
 }
 
 .registration button {
