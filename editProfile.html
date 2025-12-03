@@ -22,23 +22,27 @@
             <div class="user-profile__container">
                 <img src="assets/img/banners/user_photo.png" alt="user_photo">
                 <div class="user-profile__info">
-                    <form>
-                        <label>Имя (можно редактировать)</label>
-                        <input type="text" value="Олег">
-                        <label>Загрузите фото профиля</label>
-                        <input type="file">
+                    <form action="/profile/update/" method="post" enctype="multipart/form-data">
+                        <div>
+                            <label for="name">Имя (можно редактировать)</label>
+                            <input type="text" id="name" name="name" value="Олег" required>  
+                        </div>
+                        <div>
+                            <label for="avatar">Загрузите фото профиля</label>
+                            <input type="file" id="avatar" name="avatar" accept="image/*">
+                        </div>
                     </form>
                 </div>
             </div>
             <div class="user-profile__bio">
-                <form>
-                    <label class="user-profile__bio-label">Описание (можно редактировать)</label>
-                    <input type="text" value="Очень милая и добрая жаба">
+                <form action="/profile/update/" method="post">
+                    <label for="bio" class="user-profile__bio-label">Описание (можно редактировать)</label>
+                    <input type="text" id="bio" name="description" value="Очень милая и добрая жаба" required>
                 </form>
             </div>
-        </section>
-        <section class="favorit-games wrapper">
-
+            <div class="user-profile__button">
+                <button class="button">Сохранить изменения</button>
+            </div>
         </section>
 
     
