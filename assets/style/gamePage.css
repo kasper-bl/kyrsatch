@@ -323,6 +323,10 @@ input{
         width: 100%;
     }
 
+    .game-cart__category{
+        width: 95%;
+    }
+
     .game-cart__content{
         width: 100%;
         align-items: flex-start;
