@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,13 +16,14 @@
             <div class="header__button">
                 <a href="/index.html" class="button">Выход</a>
             </div>
+        </div> <!-- Закрытый тег div -->
     </header>
     <main>
         <section class="user-profile wrapper">
             <div class="user-profile__container">
                 <img src="assets/img/banners/user_photo.png" alt="user_photo">
                 <div class="user-profile__info">
-                    <form action="/profile/update/" method="post" enctype="multipart/form-data">
+                    <form>
                         <div>
                             <label for="name">Имя (можно редактировать)</label>
                             <input type="text" id="name" name="name" value="Олег" required>  
@@ -44,8 +45,6 @@
                 <button class="button">Сохранить изменения</button>
             </div>
         </section>
-
-    
     </main>
     <footer id="footer" class="footer wrapper">
         <div class="footer__form">

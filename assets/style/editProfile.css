@@ -85,12 +85,13 @@ button{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 650px;
+    width: 630px;
     gap: 20px;
 }
 
-.user-profile__container{
-    display: flex;
+.user-profile__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 30px;
 }
 
@@ -189,22 +190,32 @@ input{
 
 @media (max-width:768px){
 
+
     .user-profile{
         width: 95%;
+        align-items: flex-start;
     }
-
     .user-profile__container img{
         max-width: 60%;
     }
 
-    .user-profile__container{
-        flex-direction: column;
-        width: 90%;
+    .user-profile__container {
+        grid-template-columns: 1fr;
+        width: 95%;
     }
 
     .user-profile__bio{
         width: 90%;
     }
+
+    .user-profile__bio form{
+        width: 90vw;
+    }
+
+    .user-profile__button{
+        padding-right: 15px;
+    }
+
     .footer{
         flex-direction: column;
         align-items: flex-start;
@@ -223,6 +234,10 @@ input{
 
 
 @media (max-width:360px){
+
+    .user-profile__container img{
+        max-width: 100%;
+    }
 
     .user-profile__container{
         flex-direction: column;
