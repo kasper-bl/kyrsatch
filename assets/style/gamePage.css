@@ -331,4 +331,7 @@ input{
         width: 100%;
         align-items: flex-start;
     }
+    .game-cart__content h2{
+        font-size: 2.5rem;
+    }
 }
