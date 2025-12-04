@@ -1,3 +1,5 @@
+@import url(/assets/style/css/root.css);
+
 *{
     margin: 0;
     padding: 0;
@@ -7,14 +9,6 @@
 a{
     text-decoration: none;
     color: var(--text-white);
-}
-
-:root{
-    --text-white: #fff;
-    --body-color: #02010E;
-    --btn-color: #C52932;
-    --btn-hover: #ad1e25;
-
 }
 
 html{
@@ -65,7 +59,7 @@ main{
     justify-content: center;
     gap: 20px;
     align-items: center;
-   
+    text-align: center;
 }
 
 .main-content h2{
@@ -74,4 +68,9 @@ main{
 
 .main-content h3{
     font-size: 2.5rem;
+    font-weight: 400;
+}
+
+.main-content p{
+    font-size: 1.2rem;
 }

@@ -1,3 +1,5 @@
+@import url(/assets/style/css/root.css);
+
 *{
     margin: 0;
     padding: 0;
@@ -7,23 +9,6 @@
 a{
     text-decoration: none;
     color: var(--text-white);
-}
-
-:root{
-    --text-white: #fff;
-    --body-color: #02010E;
-    --btn-color: #C52932;
-    --blue-text: #5C7A9D;
-    --dark-blue-color: #1B1A26;
-    --bg-input: #31303B;
-    --bg-cart: #152240;
-    --green: #13C25C;
-    --red-text: #F5313C;
-    --yellow: #CC9933;
-    --grey-text:#969696;
-    --btn-hover: #ad1e25;
-    --cart-hover: #213778;
-
 }
 
 html{
@@ -53,14 +38,13 @@ input{
     background: 
         radial-gradient(ellipse at center bottom, rgba(255, 255, 255, 0.315), transparent 50%),
         var(--btn-color);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .button:hover{
     background-color: var(--btn-hover);
     box-shadow: inset 0 0 5px 1px rgba(255, 255, 255, 0.548),  0 0 10px var(--btn-hover);
 }
-
-
 
 .blue-text{
     color: var(--blue-text);
@@ -81,6 +65,31 @@ input{
 
 .menu__content{
     display: none;
+}
+
+.header__nav a {
+    position: relative;
+    padding-bottom: 4px;  
+    transition: border-bottom 0.3s ease;
+
+}
+
+.header__nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--blue-text);
+    border-radius: 3px;
+    opacity: 0;
+    transform-origin: center;
+    transition: opacity 0.3s ease;
+}
+
+.header__nav a:hover::after {
+    opacity: 1;
 }
 
 .header__content{
@@ -105,6 +114,11 @@ input{
 }
 
 
+main{
+    background: radial-gradient(circle 250px at left 20%, #004ca25e, transparent 100%),
+                radial-gradient(circle 250px at right 70%, #004ca25e, transparent 100%);
+}
+
 /*USER-PROFILE*/
 
 .user-profile{
@@ -122,6 +136,22 @@ input{
     gap: 10px;
     width: 100%;
 }
+
+.user-profile__info h2{
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+.user-profile__info a{
+    color: var(--grey-text);
+    transition: color 0.3s ease;
+}
+
+.user-profile__info a:hover{
+    color: var(--text-white);
+}
+
+
 
 .user-profile__bio-label {
     font-size: 0.85rem;
@@ -174,6 +204,16 @@ input{
     gap: 70px;
 }
 
+.favorit-games__variant p{
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+.favorit-games__variant p:hover{
+    color: var(--text-white);
+
+}
+
 .favorit-games__tabs--active{
     color: var(--text-white);
 }
@@ -196,23 +236,37 @@ input{
     border-radius: 10px;
     position: relative;
     overflow: hidden;
+    transition: box-shadow 0.3s ease;
 }
+
+.catalog__cart:hover{
+    box-shadow: 0 3px 15px var(--cart-hover);
+}
+
 
 .catalog__cart > img{
     width: 100%;
     height: auto;
 }
 
-.cart__logo {
+.cart__top {
     position: absolute;
     top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     right: 10px;
-    width: 100px;
+    width: 300px;
     z-index: 10;
 }
 
-.cart__logo img{
-    width: 100%;
+.cart__top img:nth-child(2){
+    width: 50px;
+    height: auto;
+}
+
+.cart__top img:nth-child(1){
+    width: 10%;
     height: auto;
 }
 
@@ -298,6 +352,7 @@ input{
     gap: 10px;
 }
 
+
 .card__bg-wrapper {
     width: 100%;
     height: 300px;
@@ -317,11 +372,16 @@ input{
     gap: 10px;
 }
 
+.catalog__pagination img{
+    cursor: pointer;
+}
+
 .pagination__item{
     padding: 16px 23px;
     text-align: center;
     border: 3px solid var(--btn-color);
     border-radius: 10px;
+    transition: background 0.5s ease, box-shadow 0.5s ease;
     cursor: pointer;
 }
 
@@ -336,10 +396,15 @@ input{
         var(--btn-color);
     cursor: pointer;
 }
+.pagination__item:hover{
+    box-shadow: inset 0 0 10px 1px #cf585e;
+    background: 
+        radial-gradient(circle at center bottom, rgba(255, 255, 255, 0.315), transparent 50%),
+        var(--btn-color);
+}
 
 
 /*FOOTER*/
-
 
 .footer{
     width: 90%;
@@ -365,6 +430,7 @@ input{
     background-color: transparent;
     border: none;
     font-size: 16px;
+    color: var(--text-white);
     outline: none;
     padding: 8px 12px;
     border-radius: 50px;
@@ -379,13 +445,23 @@ input{
     background-color: var(--bg-input);
 }
 
+.footer__form form:focus-within{
+  border: 1px solid #fff;
+}
+
 .footer__form button{
     border: none;
 }
 
-.footer__form form:focus-within{
-  border: 1px solid #fff;
+.footer__form form input::placeholder {
+  transition: color 0.2s ease;
 }
+
+
+.footer__form form input:hover::placeholder {
+  color: var(--text-white);
+}
+
 
 
 @media(max-width:950px){

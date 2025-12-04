@@ -1,3 +1,5 @@
+@import url(/assets/style/css/root.css);
+
 *{
     margin: 0;
     padding: 0;
@@ -9,22 +11,6 @@ a{
     color: var(--text-white);
 }
 
-:root{
-    --text-white: #fff;
-    --body-color: #02010E;
-    --btn-color: #C52932;
-    --blue-text: #5C7A9D;
-    --dark-blue-color: #1B1A26;
-    --bg-input: #31303B;
-    --bg-cart: #152240;
-    --green: #13C25C;
-    --red-text: #F5313C;
-    --yellow: #CC9933;
-    --grey-text:#969696;
-    --btn-hover: #ad1e25;
-    --cart-hover: #213778;
-
-}
 
 html{
     scroll-behavior: smooth;
@@ -187,6 +173,7 @@ input{
 .catalog__search-container{
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .catalog__search{
@@ -211,15 +198,72 @@ input{
     border: 1px solid #fff;
 }
 
+/*SORT*/
+
 .catalog__sort{
+    position: relative;
+}
+
+.sort__title{
     display: flex;
     gap: 10px;
     align-items: center;
+    cursor: pointer;
 }
+
+.sort__options {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: var(--dark-blue-color);
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    min-width: 200px;
+    opacity: 0;
+    transform: translateY(-8px);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 6px;
+    padding: 8px 10px;
+}
+
+.sort__options p{
+    cursor: pointer;
+    font-size: 1rem;
+    color: var(--grey-text);
+    transition: color 0.5s ease;
+}
+
+.sort__options p:last-child{
+    color: var(--text-white);
+}
+
+.sort__options p:hover{
+    color: var(--text-white);
+}
+
+.sort__title img {
+    transition: transform 0.7s ease ;
+}
+
+.sort__list:hover .sort__title img {
+    transform: rotate(180deg);
+}
+
+.sort__list:hover .sort__options {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 
 .catalog__sort p{
     font-size: 0.8rem;
 }
+
+
 
 
 .catalog__inner{
@@ -271,6 +315,16 @@ input{
     justify-content: space-between;
 }
 
+.filters__category p, .filters__players p, .filters__age p, .filters__complexity p {
+    color: var(--grey-text);
+    cursor: pointer;
+    transition: color 0.5s ease;
+}
+
+.filters__category:hover p, .filters__complexity div:hover p, .filters__age p:hover {
+    color: var(--text-white);
+}
+
 .filters__complexity{
     display: flex;
     flex-direction: column;
@@ -278,9 +332,7 @@ input{
     justify-content: space-between;
 }
 
-.filters__category p, .filters__players p, .filters__age p, .filters__complexity p {
-    color: var(--grey-text);
-}
+
 
 .filters__content{
     display: flex;
@@ -293,37 +345,50 @@ input{
 }
 
 
-.range-slider {
+
+.catalog__slider {
+    padding: 20px;
+}
+
+.slider__container {
     position: relative;
-    width: 100%;
     height: 4px;
-    background: #555;
+    background-color: #666;
     border-radius: 2px;
-    margin-bottom: 20px;
+    margin: 15px 0;
+}
+
+.slider__track {
+    position: absolute;
+    height: 100%;
+    background-color: var(--btn-color);
+    border-radius: 2px;
+    left: 0;
+    right: 50%; 
+}
+
+.slider__handle {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: var(--btn-color);
+    border-radius: 50%;
+    top: -4px;
+    right: 50%; 
     cursor: pointer;
 }
 
-.range-track {
-    position: absolute;
-    top: 0;
+.slider__handle-left {
     left: 0;
-    height: 100%;
-    background: #ff3b3b;
-    border-radius: 2px;
-    pointer-events: none;
 }
 
-.range-handle {
-    position: absolute;
-    top: -6px;
-    width: 16px;
-    height: 16px;
-    background: #ff3b3b;
-    border-radius: 50%;
-    cursor: grab;
-    z-index: 2;
-    box-shadow: 0 0 5px rgba(0,0,0,0.3);
-    }
+.slider__handle-right {
+    right: 50%;
+}
+
+.catalog__slider span {
+    color: var(--btn-color);
+}
 
 
 .catalog__pagination{
@@ -332,12 +397,19 @@ input{
     gap: 10px;
 }
 
+/*PAGINATION*/
+
+.catalog__pagination img{
+    cursor: pointer;
+}
+
 .pagination__item{
     padding: 16px 23px;
     text-align: center;
     border: 3px solid var(--btn-color);
     border-radius: 10px;
     cursor: pointer;
+    transition: background 0.5s ease, box-shadow 0.5s ease;
 }
 .pagination__item--active{
     padding: 16px 23px;
@@ -351,14 +423,14 @@ input{
     cursor: pointer;
 }
 
-.filters__content p {
-    cursor: pointer;
-    transition: color 0.3s ease;
+.pagination__item:hover{
+    box-shadow: inset 0 0 10px 1px #cf585e;
+    background: 
+        radial-gradient(circle at center bottom, rgba(255, 255, 255, 0.315), transparent 50%),
+        var(--btn-color);
 }
 
-.filters__content .filters__category p:first-child:hover,.filters__age p:hover, .filters__complexity p:first-child:hover {
-    color: var(--text-white);
-}
+
 /* CARD*/
 
 .catalog__cart{
@@ -538,6 +610,15 @@ input{
 
 .footer__form button{
     border: none;
+}
+
+.footer__form form input::placeholder {
+  transition: color 0.2s ease;
+}
+
+
+.footer__form form input:hover::placeholder {
+  color: var(--text-white);
 }
 
 
