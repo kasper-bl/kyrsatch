@@ -138,6 +138,11 @@ input:focus{
   border: 1px solid #fff;
 }
 
+form p{
+  color: var(--grey-text);
+  cursor: pointer;
+}
+
 .registration button {
   border: none;
   font-size: 1rem;
