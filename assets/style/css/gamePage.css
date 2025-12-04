@@ -21,6 +21,8 @@ a{
     --red-text: #F5313C;
     --yellow: #CC9933;
     --grey-text:#969696;
+    --btn-hover: #ad1e25;
+    --cart-hover: #213778;
 
 }
 
@@ -250,6 +252,10 @@ input{
 
 .footer__form button{
     border: none;
+}
+
+.footer__form form:focus-within{
+  border: 1px solid #fff;
 }
 
 @media(max-width:860px){

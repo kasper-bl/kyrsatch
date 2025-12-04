@@ -21,6 +21,8 @@ a{
     --red-text: #F5313C;
     --yellow: #CC9933;
     --grey-text:#969696;
+    --btn-hover: #ad1e25;
+    --cart-hover: #213778;
 
 }
 
@@ -52,6 +54,13 @@ input{
         radial-gradient(ellipse at center bottom, rgba(255, 255, 255, 0.315), transparent 50%),
         var(--btn-color);
 }
+
+.button:hover{
+    background-color: var(--btn-hover);
+    box-shadow: inset 0 0 5px 1px rgba(255, 255, 255, 0.548),  0 0 10px var(--btn-hover);
+}
+
+
 
 .blue-text{
     color: var(--blue-text);
@@ -372,6 +381,10 @@ input{
 
 .footer__form button{
     border: none;
+}
+
+.footer__form form:focus-within{
+  border: 1px solid #fff;
 }
 
 
